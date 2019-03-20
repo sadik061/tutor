@@ -3,47 +3,75 @@
 <?php include '../Template/navbar.php'?>
     <div id="login-page">
         <div class="container">
-            <form class="form-login" action="index.html">
-                <h2 class="form-login-heading">sign in now</h2>
+            <form class="form-login" action="../core/login.php" method="get">
+                <h2 class="form-login-heading">Log in now</h2>
                 <div class="login-wrap">
-                    <input type="text" class="form-control" placeholder="User ID" autofocus>
+                    <?php if (isset($_GET['message']))
+                    {
+                        echo '<div class="alert alert-danger"><b>Warning! </b>'.$_GET['message'].'</div>';
+                    }
+                    ?>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="Student" checked="">
+                            I am a Student
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="Teacher">
+                            I am a Teacher
+                        </label>
+                    </div>
+                    <input type="email" name="email" class="form-control" placeholder="Email">
                     <br>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
                     <label class="checkbox">
 
                         <span class="pull-right">
             <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
             </span>
                     </label>
-                    <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+                    <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> LOG IN</button>
                     <hr>
-                    <div class="login-social-link centered">
-                        <p>or you can sign in via your social network</p>
-                        <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-                        <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-                    </div>
+
                     <div class="registration">
                         Don't have an account yet?<br/>
-                        <a class="" href="#">
+                        <a class="" href="signup.php">
                             Create an account
                         </a>
                     </div>
                 </div>
+            </form>
                 <!-- Modal -->
                 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
                     <div class="modal-dialog">
+                        <form class="form-login" action="../core/forget.php" method="get">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 <h4 class="modal-title">Forgot Password ?</h4>
                             </div>
+
                             <div class="modal-body">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="Student" checked="">
+                                        I am a Student
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="Teacher">
+                                        I am a Teacher
+                                    </label>
+                                </div>
                                 <p>Enter your e-mail address below to reset your password.</p>
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                                <input type="text" name="femail" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
                             </div>
                             <div class="modal-footer">
                                 <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                                <button class="btn btn-theme" type="button">Submit</button>
+                                <button class="btn btn-theme" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>

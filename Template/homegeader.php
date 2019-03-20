@@ -12,20 +12,16 @@
     <!-- Favicons -->
     <link href="../static/img/favicon.png" rel="icon">
     <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../static/css/ven.css" rel="stylesheet">
+    <link href="../static/css/vendor.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--external css-->
-    <link href="../static/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../static/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="../static/lib/gritter/css/jquery.gritter.css" />
-    <!-- Custom styles for this template -->
-    <link href="../static/css/style.css" rel="stylesheet">
-    <link href="../static/css/style-responsive.css" rel="stylesheet">
-    <script src="../static/lib/chart-master/Chart.js"></script>
-    <link href="../static/css/custom.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="../static/css/agency.css" rel="stylesheet">
 
     <!-- =======================================================
       Template Name: Dashio

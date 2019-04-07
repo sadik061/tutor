@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <?php include 'database.php' ?>
 <?php
 $email = $_GET["email"];
@@ -13,6 +17,9 @@ if($type=='Student')
                 header("Location: ../routes/login.php?message=Please verify your email address");
             }
             else{
+                $_SESSION["id"] =$row["student_id"];
+                $_SESSION["type"] = "student";
+                $_SESSION["Active"] = "yes";
                 header("Location: ../routes/profile.php");
             }
         }
@@ -29,6 +36,9 @@ if($type=='Student')
                 header("Location: ../routes/login.php?message=Please verify your email address");
             }
             else{
+                $_SESSION["id"] =$row["tutor_id"];
+                $_SESSION["type"] = "teacher";
+                $_SESSION["Active"] = "yes";
                 header("Location: ../routes/profile.php");
             }
         }

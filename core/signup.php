@@ -8,7 +8,7 @@ if($type=="teacher") {
     $sql = "SELECT * FROM tutors where email='" . $email . "'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-        if ($_GET["email"] != "") {
+        if ($_GET["temail"] != "") {
             header("Location: ../routes/login.php?message=Email already taken");
         }
     } else {
@@ -51,10 +51,11 @@ if($type=="teacher") {
 else{
     $password = $_GET["spassword"];
     $email = $_GET["semail"];
+    echo $email;
     $sql = "SELECT * FROM students where email='" . $email . "'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
-        if ($_GET["email"] != "") {
+        if ($_GET["semail"] != "") {
             header("Location: ../routes/login.php?message=Email already taken");
         }
     } else {

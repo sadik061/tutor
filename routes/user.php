@@ -55,8 +55,8 @@
                         <div class="profile-pic">
                             <p><img src="img/ui-sam.jpg" class="img-circle"></p>
                             <p>
-                                <button class="btn btn-theme"><i class="fa fa-envelope"></i> Send Message
-                                </button>
+                                <a href="compose.php?to=<?php echo $_GET['id']; ?>" class="btn btn-theme"><i class="fa fa-envelope"></i> Send Message
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                                 <table class="table table-striped table-advance table-hover">
 
                                     <?php
-                                    $sql2 = "SELECT * from student_requirements where student_id=". $_SESSION['id'];
+                                    $sql2 = "SELECT * from student_requirements where student_id=". $_GET['id'];
                                     $result2 = $conn->query($sql2);?>
                                     <thead>
                                     <tr>

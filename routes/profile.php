@@ -44,10 +44,7 @@
                             <div class="col-md-4 centered">
                                 <div class="profile-pic">
                                     <p><img src="img/ui-sam.jpg" class="img-circle"></p>
-                                    <p>
-                                        <button class="btn btn-theme"><i class="fa fa-envelope"></i> Send Message
-                                        </button>
-                                    </p>
+
                                 </div>
                             </div>
                             <!-- /col-md-4 -->

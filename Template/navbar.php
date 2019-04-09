@@ -14,7 +14,7 @@
             <!--  notification start -->
             <ul class="nav top-menu">
                 <!-- settings start -->
-                <li><a href="../routes/index.php">Home</a></li>
+                <li><a href="../routes/index.php">Tutions</a></li>
 
 
             </ul>
